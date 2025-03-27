@@ -127,21 +127,61 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Scroll horizontal e vertical para telas menores (mobile e tablet) */
+.table-container {
+  width: 100%;
+  overflow-x: auto; // Garante scroll horizontal caso necessário
+}
+
+.historyTable {
+  width: 100%; // Faz a tabela ocupar toda a largura do container
+  min-width: 100%; // Garante que o mínimo seja sempre 100%
+  border-collapse: collapse;
+  margin-top: 1rem;
+
+  th, td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap; // Evita quebras de linha desnecessárias
+  }
+
+  th {
+    background-color: #3498db;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    th, td {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+
+    th, td {
+      padding: 0.4rem;
+    }
+
+    th {
+      font-size: 0.9rem;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .table-container {
     overflow-x: auto;
-    overflow-y: auto;
-    max-height: 400px;
     width: 100%;
   }
 
   .historyTable {
-    width: 100%;
-    min-width: 200px; /* Mantém a tabela responsiva */
-    display: block;
+    width: 100%; // Ajusta a tabela para ocupar todo o espaço disponível
+    min-width: 600px; // Mantém um tamanho mínimo para evitar que fique muito compacta
   }
 }
+
 
 /* Para telas maiores, fixar o cabeçalho ao rolar */
 @media (min-width: 769px) {
