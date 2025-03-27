@@ -72,7 +72,7 @@ const History: React.FC = () => {
                       <button 
                         onClick={() => deleteEntry(index)} 
                         className="delete-button"
-                        style={{ padding: "8px" }}
+                        style={{ padding: "10px" }}
                       >
                         <Trash2 size={18} />
                       </button>
