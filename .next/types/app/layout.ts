@@ -1,4 +1,4 @@
-// File: C:\Users\User\banco-de-horas\app\layout.tsx
+// File: C:\Users\User\banco-horas\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -24,45 +24,46 @@ a {
   text-align: center; /* Centraliza o conteúdo */
 }
 
-.button-group {
-  display: flex;
-  justify-content: center;
-  gap: 1rem; /* Espaçamento entre os botões */
-}
-
 .button {
-  background-color: #6200ee;
+  background-color: #3498db;
   color: white;
   border: none;
   padding: 0.8rem 2rem;
   cursor: pointer;
   border-radius: 0.3rem;
   transition: background-color 0.3s;
-}
+  font-size: 1rem;
 
-.button:hover {
-  background-color: #3700b3;
+  &:hover {
+    background-color: #1483cc;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
 }
 
 .delete-button {
-  background-color: #6200ee;
+  background-color: #ee0000bd;
   color: white;
   border: none;
   padding: 8px;
   cursor: pointer;
   border-radius: 0.3rem;
   transition: background-color 0.3s;
-}
+  font-size: 1rem;
 
-.delete-button:hover {
-  background-color: #3700b3;
+  &:hover {
+    background-color: #cc0000;
+  }
 }
 
 .header {
   font-size: 1rem;
   margin-bottom: 1rem;
   text-align: center;
-  background-color: #6200ee;
+  background-color: #3498db;
   padding: 1rem;
   color: white;
   border-radius: 0.5rem;
@@ -80,12 +81,31 @@ a {
   }
 
   th {
-    background-color: #6200ee;
+    background-color: #3498db;
     color: white;
+  }
+
+  @media (max-width: 768px) {
+    th, td {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+
+    th, td {
+      padding: 0.4rem;
+    }
+
+    th {
+      font-size: 0.9rem;
+    }
   }
 }
 
-.message {
+.totalHoras, .message, h3 {
   margin-top: 1rem;
   padding: 1rem;
   background-color: #e0e0e0;
@@ -94,10 +114,102 @@ a {
   font-size: 1.2rem;
 }
 
+.message {
+  margin-bottom: 2rem;
+}
 
 footer {
   text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Scroll horizontal e vertical para telas menores (mobile e tablet) */
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 400px;
+    width: 100%;
+  }
+
+  .historyTable {
+    width: 100%;
+    min-width: 200px; /* Mantém a tabela responsiva */
+    display: block;
+  }
+}
+
+/* Para telas maiores, fixar o cabeçalho ao rolar */
+@media (min-width: 769px) {
+  .table-container {
+    overflow-y: auto;
+    max-height: 500px;
+    position: relative; /* Necessário para o cabeçalho fixo */
+  }
+
+  .historyTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .historyTable thead {
+    position: sticky;
+    top: 0;
+    background-color: #3498db; /* Mantém a cor azul no cabeçalho */
+    z-index: 100;
+  }
+
+  .historyTable th {
+    background-color: #3498db; /* Garante que o cabeçalho continue azul */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
 }
 
 
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .button, .delete-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    display: block; /* Faz os botões ocuparem a largura total */
+    width: 100%; /* Garante que fiquem centralizados e ajustados */
+    text-align: center;
+    margin: 0.5rem auto; /* Centraliza os botões */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  .button, .delete-button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+    display: block; /* Mantém os botões responsivos */
+    width: 100%; /* Ocupa toda a largura disponível */
+    text-align: center;
+    margin: 0.5rem auto;
+  }
+
+  .header {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .totalHoras, .message, h3 {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
 

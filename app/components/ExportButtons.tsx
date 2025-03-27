@@ -18,7 +18,7 @@ const ExportButtons: React.FC = () => {
 
   return (
     <div>
-      <button onClick={exportCSV} className="button" style={{ marginRight: '1rem', marginTop: '2rem' }}>
+      <button onClick={exportCSV} className="button" style={{ marginRight: '2rem', marginTop: '2rem' }}>
         Exportar para CSV
       </button>
       <button onClick={exportPDF} className="button">
