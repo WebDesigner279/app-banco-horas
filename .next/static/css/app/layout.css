@@ -21,7 +21,7 @@ a {
 }
 
 .container {
-  max-width: 650px;
+  max-width: 750px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center; /* Centraliza o conteúdo */
@@ -49,7 +49,6 @@ a {
   background-color: rgba(238, 0, 0, 0.7411764706);
   color: white;
   border: none;
-  padding: 8px;
   cursor: pointer;
   border-radius: 0.3rem;
   transition: background-color 0.3s;
@@ -57,6 +56,10 @@ a {
 }
 .delete-button:hover {
   background-color: #cc0000;
+}
+
+.button-danger {
+  margin-left: 4.7rem;
 }
 
 .header {
@@ -166,23 +169,24 @@ footer {
     max-width: 90%;
     padding: 1.5rem;
   }
-  .button, .delete-button {
+  .button, .delete-button, .button-danger {
     padding: 0.6rem 1.5rem;
     font-size: 0.9rem;
     display: block; /* Faz os botões ocuparem a largura total */
     width: 100%; /* Garante que fiquem centralizados e ajustados */
+    height: 2.5rem;
     text-align: center;
     margin: 0.5rem auto; /* Centraliza os botões */
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .container {
-    max-width: 95%;
-    padding: 1rem;
+    max-width: 100%;
+    padding: 8px;
   }
   .button, .delete-button {
     padding: 0.5rem 1.2rem;
-    font-size: 0.8rem;
+    font-size: 16px;
     display: block; /* Mantém os botões responsivos */
     width: 100%; /* Ocupa toda a largura disponível */
     text-align: center;

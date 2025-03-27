@@ -85,7 +85,7 @@ const TimeCard: React.FC = () => {
       <button 
         onClick={startTimer} 
         className="button" 
-        style={{ marginRight: '1.8rem', marginBottom: '2rem', marginTop: '1rem' }}
+        style={{ marginRight: '2rem', marginBottom: '2rem', marginTop: '1rem' }}
         disabled={isRunning}
       >
         Inicializar
